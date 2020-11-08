@@ -23,14 +23,14 @@ class MainComponent extends Component {
       return (
          <div>
             <h2>
-               <div>
-                  <div className="container">
+               <div  >
+                  <div className=" col-md-6 offset-md-3">
                      <button className="btn-btn-primary" onClick={this.register}>register</button>
                   </div>
                </div>
             </h2>
             <h2>
-               <div>
+               <div className=" col-md-6 offset-md-3">
                   <div className="container">
                      <button className="btn-btn-primary" onClick={this.login}>login</button>
                   </div>

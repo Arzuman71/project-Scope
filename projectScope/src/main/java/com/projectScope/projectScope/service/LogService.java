@@ -18,8 +18,8 @@ public class LogService {
         logRepo.save(log);
     }
 
-    public void deleteById(long id) {
-        logRepo.deleteById(id);
+    public void deleteById( List<Long> idS) {
+        idS.forEach(logRepo::deleteById);
 
     }
 

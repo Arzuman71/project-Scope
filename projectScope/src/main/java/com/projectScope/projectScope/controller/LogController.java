@@ -37,9 +37,10 @@ public class LogController {
         return ResponseEntity.ok("Ok");
     }
 
-    @DeleteMapping("/log/{id}")
-    public ResponseEntity<String> delete(@PathVariable("id") int id) {
-        logService.deleteById(id);
+    // http://localhost:8080/log/1,2,3,4,7
+    @DeleteMapping("/log/{listId}")
+    public ResponseEntity<String> delete(@PathVariable("listId") List<Long> listId) {
+        logService.deleteById(listId);
         return ResponseEntity.ok("Ok");
     }
 

@@ -44,7 +44,7 @@ class HomeComponent extends Component {
                <button className="btn-btn-primary" onClick={this.logs}>logs</button>
             </h2>
             <h2>
-               <button className="btn-btn-primary" onClick={this.projectsUserAdd}>logs</button>
+               <button className="btn-btn-primary" onClick={this.projectsUserAdd}>add user to project</button>
             </h2>
          </div>
       );

@@ -40,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .antMatchers(HttpMethod.GET, "/logs").hasAnyAuthority("TEAM_MEMBER")
                 .antMatchers(HttpMethod.POST, "/userMember/projects", "/log").hasAnyAuthority("TEAM_MEMBER")
-                .antMatchers(HttpMethod.DELETE, "/log/{id}").hasAnyAuthority("TEAM_MEMBER")
+                .antMatchers(HttpMethod.DELETE, "/log/{listId}").hasAnyAuthority("TEAM_MEMBER")
 
                 .antMatchers(HttpMethod.POST, "/userLeader/projects","/projects", "/projects/user/add").hasAnyAuthority("TEAM_LEADER")
                 .antMatchers(HttpMethod.DELETE, "/projects").hasAnyAuthority("TEAM_LEADER")
@@ -67,7 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public JwtAuthenticationTokenFilter authenticationTokenFilterBean() throws Exception {
+    public JwtAuthenticationTokenFilter authenticationTokenFilterBean() {
         return new JwtAuthenticationTokenFilter();
     }
 
