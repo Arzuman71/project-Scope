@@ -49,16 +49,6 @@ class RegisterComponent extends Component {
    changeTypeHandler = (event) => {
       this.setState({ type: event.target.value });
    }
-   changePictuerHandler = (event) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-         if(reader.readyState === 2){
-            this.setState({profilePicture: reader.result})
-         }
-      }
-      reader.readAsDataURL(event.target.files[0])
-   }
-
 
    render() {
       return (
@@ -99,7 +89,7 @@ class RegisterComponent extends Component {
                                  <option value="TEAM_MEMBER">TEAM_MEMBER</option>
                               </select>
                            </div>
-                           <button className="btn btn-success" onClick={this.changePictuerHandler}> Register </button>
+                           <button className="btn btn-success"onClick={this.saveUser}> Register </button>
                         </form>
                      </div>
                   </div>
